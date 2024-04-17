@@ -1,0 +1,14 @@
+.custom-description {
+  font-style: italic;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.message {
+  font-size: 1.3em;
+  font-weight: bold;
+}
