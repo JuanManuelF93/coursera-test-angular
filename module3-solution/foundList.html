@@ -1,0 +1,29 @@
+
+  <table  class="row m-2">
+    <thead>
+      <tr>
+        <th class="text-center w-20">NAME</th>
+        <th class="text-center w-20">SHORT-NAME</th>
+        <th class="text-center w-35">DESCRIPTION</th>
+        <th class="text-center w-25">Don't want this one!</th>
+      </tr>
+    </thead>
+    <tbody class="border" ng-repeat="item in found">
+      <tr  ng-repeat="item2 in item.menu_items">
+        <td>{{ item2.name }}</td>
+        <td class="text-center">{{ item2.short_name }}</td>
+        <td>{{ item2.description }}</td>
+        <td class="text-center">
+
+          <button class="red" ng-click="onRemove({parentIndex: item.category.short_name, index: $index})">X</button></td>
+          <!-- <button class="red" ng-click="onRemove({parentIndex: $parent.$index, index: $index})">X</button></td> -->
+      </tr>
+    </tbody>
+  <!-- <li ng-repeat="item in found"> -->
+    <!-- {{ item.quantity }} of {{ item.name }} -->
+  
+    <!-- <button ng-click="list.onRemove({index: $index});">Remove Item</button> -->
+  <!-- </li> -->
+</table>
+
+<!-- <div class="error" ng-transclude></div> -->
