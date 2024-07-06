@@ -35,8 +35,6 @@
                     if (searchTerm.trim() !== "") {
                         // Iterar sobre cada clave en foundItems (A, B, C, ...)
                         angular.forEach(foundItems, function (categoryValue, categoryKey) {
-                            console.log("categoryKey: ", categoryKey, "categoryValue: ", categoryValue);
-
                             // Crear una copia de la estructura de la categoría actual
                             var categoryCopy = angular.copy(categoryValue);
 
@@ -52,7 +50,6 @@
                                 filteredItems[categoryKey] = categoryCopy;
                             }
                         });
-                        console.log("filteredItems: ", filteredItems);
                         foundItems = filteredItems;
                         return foundItems;
                     }
@@ -63,12 +60,9 @@
 
     function FoundItems() {
         var ddo = {
-            // template: '{{ found }}',
             templateUrl: 'foundList.html',
             scope: {
                 found: '<',
-                // myTitle: '@title',
-                // badRemove: '=',
                 onRemove: '&'
             }
         };

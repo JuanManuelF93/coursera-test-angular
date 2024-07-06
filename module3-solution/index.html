@@ -1,33 +1,27 @@
 <!doctype html>
 <html ng-app="NarrowItDownApp" lang="en">
-
-<head>
-  <title>Narrow Down Your Menu Choice</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="angular.min.js"></script>
-  <script src="app.js"></script>
-  <link rel="stylesheet" href="styles/bootstrap.min.css">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
-  <div class="container">
-    <h1>Narrow Down Your Chinese Menu Choice</h1>
-    <div ng-controller="NarrowItDownController as controller">
-      <div class="row d-flex">
-        <div class="form-group">
-          <input type="text" placeholder="search term" class="form-control" ng-model="controller.searchTerm">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Narrow Down Your Chinese Menu Choice</h1>
+      <div ng-controller="NarrowItDownController as controller">
+        <div class="row d-flex">
+          <div class="form-group">
+            <input type="text" placeholder="search term" class="form-control" ng-model="controller.searchTerm">
+          </div>
+          <div class="form-group narrow-button">
+            <button class="btn btn-primary" ng-click="controller.foundList();">Narrow It Down For Me!</button>
+          </div>
         </div>
-        <div class="form-group narrow-button">
-          <button class="btn btn-primary" ng-click="controller.foundList();">Narrow It Down For Me!</button>
-        </div>
+        <found-items found="controller.found" on-remove="controller.removeItem(parentIndex, index)"></found-items>
       </div>
-      <!-- <found-items found="controller.found" on-remove="controller.removeItem(index)"></found-items> -->
-      <!-- <found-items found="controller.found" on-remove="controller.removeItem(index)"></found-items> -->
-      <found-items found="controller.found" on-remove="controller.removeItem(parentIndex, index)"></found-items>
     </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
