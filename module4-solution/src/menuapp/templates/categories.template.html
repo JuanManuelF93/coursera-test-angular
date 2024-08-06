@@ -1,0 +1,13 @@
+<div class="tabs">
+  <button ui-sref="home" ui-sref-active="activeTab">Home</button>
+  <button ui-sref="categories" ui-sref-active="activeTab">Categories</button>
+</div>
+<ul>
+  <li ng-repeat="item in categories.items" ui-sref="categories.items({short_name: item.short_name})">
+    {{ item.name }}
+  </li>
+</ul>
+
+<div ui-view></div> <!-- Aquí se mostrará el contenido del estado anidado -->
+
+  

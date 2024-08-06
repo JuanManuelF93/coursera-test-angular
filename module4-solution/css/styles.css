@@ -1,0 +1,49 @@
+body {
+  font-size: 1.2em;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+li[ui-sref]:hover {
+  display: block;
+  cursor: pointer;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div.tabs>a,
+div.tabs>button {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+div.tabs {
+  margin-bottom: 10px;
+}
+
+.activeTab {
+  font-weight: bold;
+}
+
+li.marker::marker {
+  content: "";  
+}
+
+li.marker {
+  padding-bottom: 10px;
+}
+
+div.item-details {
+  display: block;
+  border: solid black 1px;
+  p{
+    margin: 0;
+  }
+
+}
